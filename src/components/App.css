@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.search-bar {
+  display: flex;
+  margin: auto;
+  max-width: 500px;
+}
+
+.search-bar input {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 70%;
+  background: #f1f1f1;
+}
+
+.search-bar button {
+  float: left;
+  width: 30%;
+  padding: 10px;
+  background: #2196f3;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none;
+  cursor: pointer;
+}
+
+.search-bar button:hover {
+  background: #0b7dda;
+}
+
+.search-bar :focus {
+  outline: none;
+}
+
+.beers-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.main-container {
+  padding: 10%;
+}

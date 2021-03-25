@@ -1,0 +1,23 @@
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  background-color: #00d0b1;
+  color: #ffffff;
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-size: 17px;
+  font-weight: 100;
+  padding: 10px;
+  margin: 10px;
+  align-items: baseline;
+}
+
+.header-container__buttons {
+  display: flex;
+  width: 25%;
+  justify-content: space-around;
+}
+
+.links {
+  text-decoration: none;
+  color: white;
+}

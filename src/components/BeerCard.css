@@ -1,0 +1,84 @@
+.beer-card {
+  background: #fff;
+  padding: 0;
+  border: none;
+  border-radius: 3px;
+  box-shadow: 1px 1px 3px 1px #d4d4d5;
+  display: flex;
+  width: 250px;
+  height: 250px;
+  margin: 5px;
+  white-space: wrap;
+  overflow: hidden;
+  justify-content: space-between;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  margin: 15px;
+  overflow: hidden;
+  white-space: wrap;
+  text-overflow: ellipsis;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.beer-card:last-child {
+  margin-bottom: 50px;
+}
+
+.beer-card .left {
+  flex: 1;
+}
+
+.beer-card .left img {
+  height: auto;
+  width: 100%;
+  float: right;
+  padding: 10px;
+  margin: 10px;
+}
+
+.title {
+  font-weight: 600;
+  font-size: small;
+}
+.beer-card .right {
+  position: relative;
+  flex: 9;
+}
+
+.plot {
+  font-size: smaller;
+  margin-right: 0;
+}
+
+.header {
+  align-self: flex-end;
+  cursor: pointer;
+}
+
+.material-icons.md-24 {
+  font-size: 24px;
+  color: #00d0b1;
+}
+
+@media screen and (max-width: 600px) {
+  .plot,
+  .title {
+    font-size: large;
+    text-overflow: ellipsis;
+  }
+  .right {
+    margin-right: 0;
+  }
+
+  .beer-card {
+  }
+}
