@@ -12,22 +12,22 @@ const App = () => {
   const [beers, setBeers] = useState([]);
   const [query, setQuery] = useState('');
   const [pageNumber, setPageNumber] = useState(1);
-  const [oldBeers, setOldBeers] = useState([]);
 
   useEffect(() => {
     fetchData();
   }, []);
 
-  const search_results = usePunkSearch(query, pageNumber);
+  const search_results = usePunkSearch(query);
 
-  useEffect(() => {
-    setOldBeers(beers);
-    setBeers(search_results);
-  }, [search_results]);
+  // useEffect(() => {
+  //   if (search_results) {
+  //     setOldBeers(beers);
+  //     setBeers(search_results);
+  //   } else {
+  //     setBeers(oldBeers);
+  //   }
+  // }, [search_results]);
 
-  function UpdateUIwithSearchResults() {
-    setBeers(search_results);
-  }
   const fetchData = () => {
     axios({
       method: 'GET',
@@ -52,7 +52,7 @@ const App = () => {
   return (
     <div>
       <Router>
-        <Header />
+        <Header fetchData={fetchData} />
         <Switch>
           <Route
             path="/"
@@ -63,6 +63,7 @@ const App = () => {
                 beers={beers}
                 setBeers={setBeers}
                 handleSearch={handleSearch}
+                searchResults={search_results}
               />
             )}
           />

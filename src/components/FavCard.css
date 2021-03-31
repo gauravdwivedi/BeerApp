@@ -70,19 +70,8 @@
 }
 
 .fav-item {
-  background-color: #00d0b1;
+  background-color: white;
 }
 
 @media screen and (max-width: 600px) {
-  .plot,
-  .title {
-    font-size: large;
-    text-overflow: ellipsis;
-  }
-  .right {
-    margin-right: 0;
-  }
-
-  .fav-card {
-  }
 }

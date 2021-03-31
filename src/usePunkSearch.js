@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 
-const usePunkSearch = (query, pageNumber) => {
+const usePunkSearch = (query) => {
   const [beers, setBeers] = useState([]);
 
   console.log('Hitting it!');

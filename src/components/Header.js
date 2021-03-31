@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import './Header.css';
 
-const Header = () => {
+const Header = (props) => {
   return (
     <div className="header-container">
       <div className="header-container__heading">
@@ -11,7 +11,7 @@ const Header = () => {
       </div>
       <div className="header-container__buttons">
         <h3>
-          <Link className="links" to="/">
+          <Link onClick={props.fetchData} className="links" to="/">
             Home
           </Link>
         </h3>
